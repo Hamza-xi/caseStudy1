@@ -1,0 +1,27 @@
+<h2 class="mb-4">Add New Training</h2>
+
+<form #form="ngForm" (ngSubmit)="addTraining(form)" class="p-4 border rounded shadow-sm bg-light">
+
+  <div class="form-group mb-3">
+    <label for="topic">Topic</label>
+    <input type="text" id="topic" name="topic" class="form-control" required [(ngModel)]="topic">
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="date">Date</label>
+    <input type="date" id="date" name="date" class="form-control" required [(ngModel)]="date">
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="unit">Unit</label>
+    <input type="text" id="unit" name="unit" class="form-control" required [(ngModel)]="unit">
+  </div>
+
+  <div class="form-group mb-4">
+    <label for="instructor">Instructor</label>
+    <input type="text" id="instructor" name="instructor" class="form-control" required [(ngModel)]="instructor">
+  </div>
+
+  <button type="submit" class="btn btn-success">Submit</button>
+
+</form>

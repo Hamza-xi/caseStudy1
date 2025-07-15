@@ -1,0 +1,36 @@
+<h1>Training Schedule</h1>
+
+<div class="container">
+    <!-- Add Training Button -->
+    <div class="mb-3 text-end">
+<div class="mb-3">
+  <button class="btn btn-success" (click)="addTraining()">Add New</button>
+</div>
+    </div>
+
+    <table class="table table-striped">
+        <thead class="table-dark text-white">
+            <tr>
+                <th>Id</th>
+                <th>Topic</th>
+                <th>Date</th>
+                <th>Unit</th>
+                <th>Instructor</th>
+                <th>Actions</th> <!-- New column for actions -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let TrInterface of TrData">
+                <td>{{ TrInterface.id }}</td>
+                <td>{{ TrInterface.topic }}</td>
+                <td>{{ TrInterface.date | date: 'yyyy-MM-dd' }}</td>
+                <td>{{ TrInterface.unit }}</td>
+                <td>{{ TrInterface.instructor }}</td>
+                <td>
+                    <button class="btn btn-sm btn-warning me-2" >Edit</button>
+                    <button class="btn btn-sm btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
